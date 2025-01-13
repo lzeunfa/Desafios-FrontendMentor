@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mq.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="desempenho">
+        <header>
+            <div class="estrela"><img src="interactive-rating-component-main/images/icon-star.svg" alt="estrela" width="30px"></div>
+        </header>
+
+        <h1>Como foi nosso <br> desempenho?</h1>
+
+        <p>Informe-nos como nos saímos com sua <br> solicitação de suporte. Todos os comentários são <br> apreciados para nos ajudar a melhorar nossa <br> oferta!</p>
+
+        <div id="classifique">
+            <ul>
+                <li id="btn1" onclick="selecionei1()">1</li>
+                <li id="btn2" onclick="selecionei2()">2</li>
+                <li id="btn3" onclick="selecionei3()">3</li>
+                <li id="btn4" onclick="selecionei4()">4</li>
+                <li id="btn5" onclick="selecionei5()">5</li>
+            </ul>
+        </div>
+
+        <div id="enviar">
+            <div id="btn_enviar"onclick="enviado()">
+                <p>ENVIAR</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Fim da parte do desempenho-->
+
+    <!--Começo da parte de avaliado-->
+
+    <div id="avaliado">
+        <img src="interactive-rating-component-main/images/illustration-thank-you.svg" alt="thank-you" width="171px">
+
+        <div id="selecionou">
+            <div id="selecionado">
+                <p id="txt">Você selecionou 0 de 5</p>
+            </div>
+        </div>
+
+        <h1>Obrigado!</h1>
+        <p>Agradecemos por dedicar seu tempo para <br> avaliar. Se você precisar de mais suporte, não <br> hesite em entrar em contato!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
