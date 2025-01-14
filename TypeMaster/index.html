@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mq.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div id="bolha">
@@ -27,7 +28,7 @@
 
         <!--Main-->
         <main>
-            <div class="cont_main">
+            <div class="cont_main" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800">
                 <h1>TECLADO TYPEMASTER</h1>
                 <p>Melhore sua produtividade e jogo sem gastar muito. Atualize para <br> uma experiência de digitação mecânica de alta qualidade.</p>
                 <div class="cont_btn_faca">
@@ -52,7 +53,7 @@
                 </div>
             </div>
 
-            <div class="content_sec">
+            <div class="content_sec" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="800">
                 <h1>TECLADO MECÂNICO SEM FIO</h1>
                 <p>O teclado Typemaster ostenta construção de primeira linha e design prático. Ele oferece uma ampla variedade de interruptores e keycaps, juntamente com conectividade sem fio confiável.</p>
             </div>
@@ -62,7 +63,7 @@
 
         <div class="infos">
             <div id="cnt_infos"><!--cnt = conteiner-->
-                <div class="info tela">
+                <div class="info tela" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
                     <div class="header_icon">
                         <img src="imgs/icon-pc.svg" alt="pc" width="30px">
                     </div>
@@ -70,7 +71,7 @@
                     <p>Fácil de usar e funciona bem com todas as principais marcas de computadores, consoles de jogos e dispositivos móveis. <br> Plug & play, sem necessidade de instalação ou driver.</p>
                 </div>
                 
-                <div class="info bluetooth">
+                <div class="info bluetooth" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
                     <div class="header_icon">
                         <img src="imgs/icon-bluetooth.svg" alt="bluetooth" width="20px">
                     </div>
@@ -78,7 +79,7 @@
                     <p>A poderosa tecnologia RF 2.4G permite que você conecte o teclado sem fio a até 30 pés de distância. Basta conectar o receptor unificador ao seu computador.</p>
                 </div>
 
-                <div class="info bateria">
+                <div class="info bateria" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
                     <div class="header_icon">
                         <img src="imgs/icon-battery.svg" alt="bateria" width="35px">
                     </div>
@@ -86,7 +87,7 @@
                     <p>Equipado com uma bateria interna de longa duração, você nunca terá que gastar um centavo em baterias substituíveis. Aproveite 40 horas de tempo de uso entre as cargas.</p>
                 </div>
 
-                <div class="info iluminação">
+                <div class="info iluminação" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
                     <div class="header_icon">
                         <img src="imgs/icon-light.svg" alt="lampada" width="35px">
                     </div>
@@ -102,5 +103,10 @@
             <p><mark>Typemaster 2021</mark> | Todos os direitos reservados</p>
         </footer>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
