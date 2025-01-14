@@ -224,20 +224,23 @@ section p{
 .infos{
     display: flex;
     align-items: center;
-    justify-content: space-around;
     flex-direction: column;
 }
 
 #cnt_infos{
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .info{
-    width: 242.5px;
+    width: 300px;
     height: 310px;
+}
+
+.info:not(:last-child){
+    padding-right: 20px;
 }
 
 .header_icon{
