@@ -52,6 +52,7 @@ body{
     max-width: 1200px;
     min-width: 550px;
     margin: 0px 50px 0px 50px;
+    overflow: hidden;
 }
 
 
@@ -203,6 +204,10 @@ section{
     margin-left: 20px;
 }
 
+.content_sec{
+    text-align: start;
+}
+
 section h1{
     font-size: 35px;
     padding-left: 30px;
@@ -220,6 +225,14 @@ section p{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-direction: column;
+}
+
+#cnt_infos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .info{
