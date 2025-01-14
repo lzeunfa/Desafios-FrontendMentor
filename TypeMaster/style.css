@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Barlow-Medium";
+    src: url(Barlow-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Barlow-Black";
+    src: url(Barlow-Black.ttf);
+}
+
+@font-face {
+    font-family: "Barlow-Bold";
+    src: url(Barlow-Bold.ttf);
+}
+
+
+/*configs gerais*/
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: "Barlow-Black";
+    color: #162542;
+}
+
+P{
+    font-family: "Barlow-Medium";
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #7B8BAD;
+}
+
+body{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*bolha bubble*/
+#bolha{
+    max-width: 1200px;
+    min-width: 550px;
+    margin: 0px 50px 0px 50px;
+}
+
+
+/*cabeçalho*/
+
+header{
+    height: 70px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.conteiner_do_header{
+    height: 44px;
+    width: 100%;
+    display: flex;
+}
+
+.logo{
+    width: auto;
+    display: flex;
+    justify-content: end;
+}
+
+.btn_encomenda{
+    width: 96%;
+    display: flex;
+    justify-content: end;
+}
+
+.cod_btn_encomenda{
+    background-color: #e8eff2;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cod_btn_encomenda:hover{
+    background-color: #162542;
+}
+
+.cod_btn_encomenda p{
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.cod_btn_encomenda p:hover{
+    color: white;
+}
+
+
+/*main*/
+
+main{
+    height: 343px;
+    display: flex;
+    align-items: center;
+}
+
+main h1{
+    font-size: 45px;
+    padding: 0px 15px 15px 15px;
+}
+
+main p{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.cont_btn_faca{
+    display: flex;
+
+}
+
+.cont_btn_faca > p{
+    padding: 3px;
+}
+
+.btn_faca{
+    background-color: #F16718;
+    width: 220px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn_faca:hover{
+    background-color: #f16818a6;
+}
+
+.btn_faca p{
+    color: white;
+    padding: 5px;
+}
+
+.img_main{
+    background-image: url(imgs/img-teclado-bckg.jpg);
+    width: 600px;
+    height: 300px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100px 20px 20px 20px;
+}
+
+
+/*section*/
+
+
+section{
+    display: flex;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.cnt_img{
+    display: flex;
+}
+
+.sec_img1{
+    background-image: url(imgs/image-phone-and-keyboard-mobile.jpg);
+    width: 380px;
+    height: 400px;
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.color_sec{
+    background-color: #f1681896;
+    width: 100%;
+    height: 100%;
+}
+
+.sec_img2{
+    background-image: url(imgs/image-glass-and-keyboard-tablet.jpg);
+    width: 500px;
+    height: 400px;
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+section h1{
+    font-size: 35px;
+    padding-left: 30px;
+}
+
+section p{
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+
+/*infos*/
+
+.infos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info{
+    width: 242.5px;
+    height: 310px;
+}
+
+.header_icon{
+    background-color: #F16718;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.info h1{
+    padding: 20px 0px;
+    font-size: 23px;
+}
+
+.info p{
+    font-size: 16px;
+}
+
+/*footer*/
+
+
+footer{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer p{
+    font-size: 18px;
+}
+
+mark{
+    background-color: transparent;
+    color: #7B8BAD;
+    font-family: "Barlow-Bold";
+}
