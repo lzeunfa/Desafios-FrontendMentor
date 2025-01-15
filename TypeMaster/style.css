@@ -69,6 +69,7 @@ header{
     height: 44px;
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 
 .logo{
@@ -78,15 +79,11 @@ header{
 }
 
 .btn_encomenda{
-    width: 96%;
     display: flex;
-    justify-content: end;
 }
 
 .cod_btn_encomenda{
     background-color: #e8eff2;
-    display: flex;
-    align-items: center;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -96,7 +93,6 @@ header{
 }
 
 .cod_btn_encomenda p{
-    text-transform: uppercase;
     padding: 15px;
 }
 
@@ -108,7 +104,6 @@ header{
 /*main*/
 
 main{
-    height: 343px;
     display: flex;
     align-items: center;
     margin: 30px 0px;
@@ -226,6 +221,7 @@ section p{
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 #cnt_infos{
