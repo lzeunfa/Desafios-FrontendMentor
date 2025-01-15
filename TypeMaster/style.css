@@ -50,7 +50,7 @@ body{
 /*bolha bubble*/
 #bolha{
     max-width: 1200px;
-    min-width: 550px;
+    min-width: 500px;
     margin: 0px 50px 0px 50px;
     overflow: hidden;
 }
