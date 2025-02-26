@@ -8,71 +8,65 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <main>
-        <h1>Sobremesas</h1>
-        <div id="items">
-            <div id="conteiner_items">
-                <div class="dessert waffle">
-                    <img src="img/waffle.jpg" alt="waffle">
-                    <p class="subtitle">Waffle</p>
-                    <p>Waffle com Frutas</p>
-                    <p class="price">R$ 28</p>
-                    <!--abaixo o botão que aparece primeiramente-->
-                    <button id="buyw" value="28" onclick="buying()"><img id="cartw" src="img/cart.svg" alt="cart" >Adicionar</button>
-
-                    <!--abaixo o botão que aparece depois-->
-                    <button id="add" value="28"><span class="symbol_decrement" onclick="decrement()">-</span> <span id="number">1</span> <span class="symbol_increment" onclick="increment()">+</span></button>
-                </div>
-
-                <div class="dessert waffle">
-                    <img src="img/Creme Brule.jpg" alt="Creme-Brule">
-                    <p class="subtitle">Creme Brule</p>
-                    <p>Creme Brule</p>
-                    <p class="price">R$ 32</p>
-                    <button class="buy" value="32"><img src="img/cart.svg" alt="cart">Adicionar</button>
-                </div>
-
-                <div class="dessert waffle">
-                    <img src="img/Macarons.jpg" alt="Macarons">
-                    <p class="subtitle">Macarons mix</p>
-                    <p>Macarons mix</p>
-                    <p class="price">R$ 34</p>
-                    <button class="buy" value="34"><img src="img/cart.svg" alt="cart">Adicionar</button>
-                </div>
-
-                <div class="dessert waffle">
-                    <img src="img/Tiramisu.jpg" alt="tiramisu">
-                    <p class="subtitle">Tiramisu</p>
-                    <p>Tiramisu</p>
-                    <p class="price">R$ 25</p>
-                    <button class="buy" value="25"><img src="img/cart.svg" alt="cart">Adicionar</button>
-                </div>
-
-                <div class="dessert waffle">
-                    <img src="img/Red velvet.jpg" alt="cake">
-                    <p class="subtitle">Bolo red velvet</p>
-                    <p>Bolo red velvet</p>
-                    <p class="price">R$ 20</p>
-                    <button class="buy" value="20"><img src="img/cart.svg" alt="cart">Adicionar</button>
-                </div>
-
-                <div class="dessert waffle">
-                    <img src="img/Brownie.jpg" alt="brownie">
-                    <p class="subtitle">Brownie</p>
-                    <p>Brownie</p>
-                    <p class="price">R$ 18</p>
-                    <button class="buy" value="18"><img src="img/cart.svg" alt="cart">Adicionar</button>
+    <div id="conteiner_geral">
+        <main>
+            <h1>Sobremesas</h1>
+            <div id="items">
+                <div id="conteiner_items">
+                    <div class="dessert waffle">
+                        <img src="img/waffle.jpg" alt="waffle">
+                        <p class="subtitle">Waffle</p>
+                        <p>Waffle com Frutas</p>
+                        <p class="price">R$ 28</p>
+                        <!--abaixo o botão que aparece primeiramente-->
+                        <button id="buyw" value="28" onclick="buying()"><img id="cartw" src="img/cart.svg" alt="cart" >Adicionar</button>
+                        <!--abaixo o botão que aparece depois-->
+                        <button id="add" value="28"><span class="symbol_decrement" onclick="decrement()">-</span> <span id="number">1</span> <span class="symbol_increment" onclick="increment()">+</span></button>
+                    </div>
+                    <div class="dessert waffle">
+                        <img src="img/Creme Brule.jpg" alt="Creme-Brule">
+                        <p class="subtitle">Creme Brule</p>
+                        <p>Creme Brule</p>
+                        <p class="price">R$ 32</p>
+                        <button class="buy" value="32"><img src="img/cart.svg" alt="cart">Adicionar</button>
+                    </div>
+                    <div class="dessert waffle">
+                        <img src="img/Macarons.jpg" alt="Macarons">
+                        <p class="subtitle">Macarons mix</p>
+                        <p>Macarons mix</p>
+                        <p class="price">R$ 34</p>
+                        <button class="buy" value="34"><img src="img/cart.svg" alt="cart">Adicionar</button>
+                    </div>
+                    <div class="dessert waffle">
+                        <img src="img/Tiramisu.jpg" alt="tiramisu">
+                        <p class="subtitle">Tiramisu</p>
+                        <p>Tiramisu</p>
+                        <p class="price">R$ 25</p>
+                        <button class="buy" value="25"><img src="img/cart.svg" alt="cart">Adicionar</button>
+                    </div>
+                    <div class="dessert waffle">
+                        <img src="img/Red velvet.jpg" alt="cake">
+                        <p class="subtitle">Bolo red velvet</p>
+                        <p>Bolo red velvet</p>
+                        <p class="price">R$ 20</p>
+                        <button class="buy" value="20"><img src="img/cart.svg" alt="cart">Adicionar</button>
+                    </div>
+                    <div class="dessert waffle">
+                        <img src="img/Brownie.jpg" alt="brownie">
+                        <p class="subtitle">Brownie</p>
+                        <p>Brownie</p>
+                        <p class="price">R$ 18</p>
+                        <button class="buy" value="18"><img src="img/cart.svg" alt="cart">Adicionar</button>
+                    </div>
                 </div>
             </div>
-
-        </div>
-    </main>
-
-    <div id="cart_purchased">
-        <h1>Seu carrinho (0)</h1>
-        <div class="no_items">
-            <img src="img/No cart.svg" alt="cake">
-            <p>Itens adicionados surgirão aqui</p>
+        </main>
+        <div id="cart_purchased">
+            <h1>Seu carrinho (0)</h1>
+            <div class="no_items">
+                <img src="img/No cart.svg" alt="cake">
+                <p>Itens adicionados surgirão aqui</p>
+            </div>
         </div>
     </div>
 

@@ -10,11 +10,20 @@
 
 body{
     display: flex;
-    align-items: normal;
+    align-items: center;
     justify-content: center;
 
     background-color: #F4EDEB;
 }
+
+/*conteiner geral*/
+
+div#conteiner_geral{
+    
+}
+
+
+/*conteiner main*/
 
 main{
     margin-top: 80px;
