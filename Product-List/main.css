@@ -10,7 +10,7 @@
 
 body{
     display: flex;
-    align-items: center;
+    align-items: normal;
     justify-content: center;
 
     background-color: #F4EDEB;
@@ -18,9 +18,6 @@ body{
 
 /*conteiner geral*/
 
-div#conteiner_geral{
-    
-}
 
 
 /*conteiner main*/
