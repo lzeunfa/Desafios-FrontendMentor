@@ -1,27 +1,29 @@
-const buttonw = document.getElementById('buyw');
-buttonw.style.backgroundColor = 'rgb(252, 249, 247)';
-buttonw.style.display=`block`
+let buttonWaff = document.getElementById('buyWaff');
+buttonWaff.style.backgroundColor = 'rgb(252, 249, 247)';
+buttonWaff.style.display=`block`;
 
-const cartwimg = document.getElementById(`cartw`)
+let cartwimg = document.getElementById(`cartw`);
 
 //abaixo é o outro butão
 
-const buttonadd = document.getElementById(`add`)
-buttonadd.style.display=`none`
+let buttonAdd = document.getElementById(`add`);
+buttonAdd.style.display=`none`;
 
-function buying() {
+function buying() {//Mudança de icons dos botões de compra
 
-    if (buttonw.style.display === 'block') {
-        buttonadd.style.display=`block`
+    if (buttonWaff.style.display === 'block') {
+        buttonAdd.style.display=`block`;
 
-        buttonw.style.display = 'none'
+        buttonWaff.style.display = 'none';
 
     } else {
-        buttonw.style.display = 'block'
-        buttonadd.style.display=`none`
+        buttonWaff.style.display = 'block';
+        buttonAdd.style.display=`none`;
     }
 }
 
+
+//Parte para adição dos produtos e preços
 function increment(){
 
 }
