@@ -4,7 +4,7 @@ buttonWaff.style.display=`block`;
 
 let cartwimg = document.getElementById(`cartw`);
 
-//abaixo é o outro butão
+//abaixo é o outro botão
 
 let buttonAdd = document.getElementById(`add`);
 buttonAdd.style.display=`none`;
