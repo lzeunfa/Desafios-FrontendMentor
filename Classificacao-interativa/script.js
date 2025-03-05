@@ -23,9 +23,9 @@ let av5 = document.getElementById(`btn5`);
     av5.style.backgroundColor=`#252D37`;
 //fim dos botões
 
-let txt = document.getElementById(`txt`)
+let txt = document.getElementById(`txt`);
 
-//function para adaptaçãodo tipo de cor
+//function para adaptação do tipo de cor hexadecimal para rgb
 function rgbToHex(rgb) {
     var rgbValues = rgb.match(/\d+/g);
     return "#" + ((1 << 24) + (parseInt(rgbValues[0]) << 16) + (parseInt(rgbValues[1]) << 8) + parseInt(rgbValues[2])).toString(16).slice(1).toUpperCase();
@@ -91,7 +91,7 @@ function selecionei5(){
 //function para enviar a avaliação
 function enviado(){
     if (bckg1.style.display===`block`){
-        bckg1.style.display=`none`
-        bckg2.style.display=`block`
+        bckg1.style.display=`none`;
+        bckg2.style.display=`block`;
     }
 }

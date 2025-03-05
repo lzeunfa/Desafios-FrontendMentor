@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+
+/*Feito para ajustar os espaçamentos das opções de avaliação ao diminuir a tela*/
 @media screen and (min-width:379px) and (max-width:679px) {
     li{
         display: flex;

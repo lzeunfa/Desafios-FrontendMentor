@@ -8,14 +8,18 @@
 *{
     margin: 0px;
     padding: 0px;
+
     box-sizing: border-box;
+
     font-family: "Overpass";
 }
 
 body{
     width: 100vw;
     height: 100vh;
+
     background-color: hsl(216, 12%, 8%);
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,9 +27,13 @@ body{
 
 #desempenho{
     background-image: linear-gradient(-45deg, #1E2228, hsl(216, 12%, 8%), #1E2228, hsl(216, 12%, 8%));
+
     width: 580px;
+
     border-radius: 20px;
+
     box-shadow: 0 2px 5px black;
+
     padding: 30px;
 }
 
@@ -39,9 +47,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+
     background-color: #252D37;
+
     width: 64px;
     height: 64px;
+
     border-radius: 50%;
 }
 
@@ -61,6 +72,7 @@ p{
 #classifique{
     height: auto;
     width: 100%;
+
     padding-top: 20px;
 }
 
@@ -68,7 +80,9 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-around;
+
     list-style: none;
+
     padding: 0px 12px 0px 12px;
 }
 
@@ -76,12 +90,16 @@ li{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    color: #FFFFF4;
     font-weight: bolder;
     font-size: 20px;
+
     width: 60px;
     height: 60px;
+
     border-radius: 50%;
-    color: #FFFFF4;
+
     cursor: pointer;
 }
 
@@ -89,15 +107,21 @@ li{
     display: flex;
     align-items: center;
     justify-content: center;
+
     padding: 20px 0px 0px 0px;
 }
 
 #btn_enviar{
     background-color: #FB7413;
+
     width: 80%;
+
     border-radius: 20px;
+
     text-align: center;
+
     cursor: pointer;
+
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.63);
 }
 
@@ -107,6 +131,7 @@ li{
 
 #btn_enviar p{
     color: white;
+
     font-size: 25px;
     font-weight: 700;
     padding: 12px;
@@ -117,25 +142,33 @@ li{
 
 #avaliado{
     background-image: linear-gradient(-45deg, #1E2228, hsl(216, 12%, 8%), #1E2228, hsl(216, 12%, 8%));
+
     width: 580px;
+    height: 480px;
+
     border-radius: 20px;
     box-shadow: 0 2px 5px black;
+
     padding: 30px;
+
     justify-content: center;
+    
     text-align: center;
-    height: 480px;
 }
 
 #selecionou{
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding-top: 20px;
 }
 
 #selecionado{
     background-color: #252D37;
+
     border-radius: 20px;
+
     text-align: center;
 }
 
