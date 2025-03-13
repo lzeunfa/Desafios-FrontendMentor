@@ -112,6 +112,15 @@
         text-align: center;
     }
 
+    section h1{
+
+        padding-left: 0px;
+    }
+    
+    section p{
+        padding-left: 0px;
+    }
+
     .sec_img1{
         width: 130px;
         height: 300px;
