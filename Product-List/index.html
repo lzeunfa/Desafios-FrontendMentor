@@ -16,7 +16,7 @@
             <div id="conteiner_items"><!--Conteiner para receber os itens/sobremesas-->
 
                 <div class="dessert waffle"><!--Dessert significa sobremesa--><!--Waffles-->
-                    <img src="img/waffle.jpg" alt="waffle">
+                    <img id="imgW" src="img/waffle.jpg" alt="waffle">
                     <p class="subtitle">Waffle</p>
                     <p>Waffle com Frutas</p>
                     <p class="price">R$ 28</p>
@@ -74,11 +74,14 @@
 
     <!--Carrinho de compras-->
     <div id="shopping"><!--Compras-->
-        <h1>Seu carrinho (0)</h1>
+        <h1>Seu carrinho (<span id="quantidade">0</span>)</h1>
+
+        <!--Abaixo está quando não tem itens adicionados ao carrinho-->
         <div class="no_items">
             <img src="img/No cart.svg" alt="cake">
             <p>Itens adicionados surgirão aqui</p>
         </div>
+        
     </div>
 
     <!--Àrea JS-->
