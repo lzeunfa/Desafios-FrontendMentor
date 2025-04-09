@@ -13,7 +13,7 @@ let btns = document.getElementsByClassName(`btn`);
     }
 //fim dos botões
 
-let txt = document.getElementsById(`txt`);
+let txt = document.getElementById("txt");
 
 //function pra seleção dos botões
 function selecionei(valor){
@@ -26,10 +26,11 @@ function selecionei(valor){
         btns[valor].style.backgroundColor = "rgb(251, 116, 19)";
     }
 
+    txt.innerText = `Você selecionou ${valor+1} de 5`;
     return;
 }
+selecionei();
 
-txt.innerText = `Você selecionou ${valor+1} de 5`;
 
 
 //function para enviar a avaliação
@@ -38,6 +39,7 @@ function enviado(){
         bckg1.style.display=`none`;
         bckg2.style.display=`block`;
     }
+
     return;
 }
 enviado();
