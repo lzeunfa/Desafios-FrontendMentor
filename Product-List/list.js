@@ -1,36 +1,47 @@
 //botão de adicionar carrinho
 let buttonSelect = document.getElementsByClassName('buy');
-for (let i = 0; i < btns.length; i++) {
-    buttonSelect[i].style.backgroundColor = 'rgb(252, 249, 247)';
-    buttonSelect.style.display=`block`;
+for (let bs = 0; bs < buttonSelect.length; bs++) {
+    buttonSelect[bs].style.backgroundColor = 'rgb(252, 249, 247)';
+    buttonSelect[bs].style.display=`block`;
 }
 
 //botao que deve aparecer ao clicar no botao de adicionar
 let buttonAdd = document.getElementsByClassName(`add`);
-for (let i = 0; i < btns.length; i++) {
-    buttonAdd[i].style.display=`none`;
+for (let ba = 0; ba < buttonAdd.length; ba++) {
+    buttonAdd[ba].style.display=`none`;
 }
 
-
 //imagem de carrinho
-let cartimg = document.getElementsByClassName(`cart`);
+let cartImg = document.getElementsByClassName(`cart`);
 
 //imagem da comida
 let img = document.getElementsByClassName(`img`);
+for (let im = 0; im < img.length; im++) {
+    img[im].style.display=`block`;
+}
 
 //para receber a mudança de número
 let quantidade = document.getElementById(`quantidade`);
 
-function buying(nmrBotao, valor, comida) {//Mudança de icons dos botões de compra
 
+//mudança de botoes e alteracoes no carrinho
+function buying(nmrBotao, valor, comida) {
+
+    //faz a alteracao dos display e estilos ao clicar no botao de adicionar
     if (buttonSelect[nmrBotao-1].style.display === 'block') {
-        buttonAdd.style.display=`block`;
-        imgW.style.border = `3px solid #CD5E43`;
+        buttonAdd[nmrBotao-1].style.display=`block`;
+        img[nmrBotao-1].style.border = `2px solid #CD5E43`;
 
         buttonSelect[nmrBotao-1].style.display = 'none';
 
     } else {
-        buttonSelect.style.display = 'block';
-        buttonAdd.style.display=`none`;
+        buttonSelect[nmrBotao-1].style.display = 'block';
+        buttonAdd[nmrBotao-1].style.display=`none`;
     }
+
+}
+
+//function pra incrementaçao e decrementaçao
+function selecionando(subSom){
+    
 }

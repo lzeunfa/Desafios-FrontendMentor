@@ -99,9 +99,11 @@ button{
     transform: translate(-50%, -1200%);
 
     cursor: pointer;
+
+    transition: 0.5s;
 }
 
-button:hover{
+.buy:hover{
     border: 1px solid #CD5E43;
     color: #CD5E43;
 }
@@ -139,7 +141,7 @@ button:hover{
     cursor: auto;
 }
 
-#number{
+.number{
     padding: 0px 15px 0px 15px;
 }
 
