@@ -106,36 +106,13 @@ button:hover{
     color: #CD5E43;
 }
 
-#buy{/*Criado apenas para todos ficarem iguais mas deposi arrumo*/
-    width: 168px;
-    height: 55.05px;
-
-    border: 1px solid #260F08;
-    border-radius: 30px;
-
-    padding: 15px;
-    font-size: 1em;
-    text-align: center;
-    color: #260F08;
-    font-weight: 100;
-
-    position: relative;
-    top: 150%;
-    left: 50%;
-    transform: translate(-50%, -1200%);
-
-    cursor: pointer;
-    transition: 0.5s;
-
-}
-
-#buy > img{
+.buy > img{
     width: 20px;
     margin-right: 5px;
 }
 
 /*Botão após clique*/
-#add{
+.add{
     display: flex;
     align-items: center;
 

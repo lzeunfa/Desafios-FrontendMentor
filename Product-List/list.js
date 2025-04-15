@@ -1,59 +1,36 @@
-//botão
-let buttonWaff = document.getElementById('buyWaff');
-buttonWaff.style.backgroundColor = 'rgb(252, 249, 247)';
-buttonWaff.style.display=`block`;
+//botão de adicionar carrinho
+let buttonSelect = document.getElementsByClassName('buy');
+for (let i = 0; i < btns.length; i++) {
+    buttonSelect[i].style.backgroundColor = 'rgb(252, 249, 247)';
+    buttonSelect.style.display=`block`;
+}
 
-let cartwimg = document.getElementById(`cartw`);
+//botao que deve aparecer ao clicar no botao de adicionar
+let buttonAdd = document.getElementsByClassName(`add`);
+for (let i = 0; i < btns.length; i++) {
+    buttonAdd[i].style.display=`none`;
+}
+
+
+//imagem de carrinho
+let cartimg = document.getElementsByClassName(`cart`);
 
 //imagem da comida
-let imgW = document.getElementById(`imgW`);
-    imgW.style.transition = `ease 0.05s`;
-
-//abaixo é o outro botão
-
-let buttonAdd = document.getElementById(`add`);
-buttonAdd.style.display=`none`;
+let img = document.getElementsByClassName(`img`);
 
 //para receber a mudança de número
 let quantidade = document.getElementById(`quantidade`);
 
-function buying() {//Mudança de icons dos botões de compra
+function buying(nmrBotao, valor, comida) {//Mudança de icons dos botões de compra
 
-    if (buttonWaff.style.display === 'block') {
+    if (buttonSelect[nmrBotao-1].style.display === 'block') {
         buttonAdd.style.display=`block`;
         imgW.style.border = `3px solid #CD5E43`;
 
-        buttonWaff.style.display = 'none';
-
-        quantidade.innerText = `1`;
+        buttonSelect[nmrBotao-1].style.display = 'none';
 
     } else {
-        buttonWaff.style.display = 'block';
+        buttonSelect.style.display = 'block';
         buttonAdd.style.display=`none`;
-    }
-}
-
-
-//Parte para adição dos produtos e preços
-function increment(){
-    
-}
-
-function decrement(){
-    if (buttonWaff.style.display === 'block') {
-        buttonAdd.style.display=`block`;
-
-        imgW.style.border = `3px solid #CD5E43`;
-
-        buttonWaff.style.display = 'none';
-
-    } else {
-        buttonWaff.style.display = 'block';
-
-        buttonAdd.style.display=`none`;
-
-        imgW.style.border = `none`;
-
-        quantidade.innerText = `0`;
     }
 }
