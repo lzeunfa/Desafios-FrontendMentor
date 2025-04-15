@@ -39,9 +39,11 @@ function buying(nmrBotao, valor, comida) {
         buttonAdd[nmrBotao-1].style.display=`none`;
     }
 
+    //function pra incrementaçao e decrementaçao
+    function selecionando(subSom){
+        
+    }
+
 }
 
-//function pra incrementaçao e decrementaçao
-function selecionando(subSom){
-    
-}
+
