@@ -103,6 +103,10 @@ li{
     cursor: pointer;
 }
 
+li:hover{
+    border: 1px solid #FB7413;
+}
+
 #enviar{
     display: flex;
     align-items: center;
