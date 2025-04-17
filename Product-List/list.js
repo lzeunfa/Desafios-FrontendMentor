@@ -23,27 +23,35 @@ for (let im = 0; im < img.length; im++) {
 //para receber a mudança de número
 let quantidade = document.getElementById(`quantidade`);
 
+//para fazer a alteração de valores no carrinho
+let conta = 0;
+
 
 //mudança de botoes e alteracoes no carrinho
-function buying(nmrBotao, valor, comida) {
+function buying(nmrBotao, valor, comida,operacao) {
 
     //faz a alteracao dos display e estilos ao clicar no botao de adicionar
     if (buttonSelect[nmrBotao-1].style.display === 'block') {
+        //parte de ao clicar no botao de adicionar carrinho acontece isso
         buttonAdd[nmrBotao-1].style.display=`block`;
         img[nmrBotao-1].style.border = `2px solid #CD5E43`;
+        quantidade.innerText ++;
 
+        //botao de carrinho select some
         buttonSelect[nmrBotao-1].style.display = 'none';
 
     } else {
+        //caso contrario
         buttonSelect[nmrBotao-1].style.display = 'block';
         buttonAdd[nmrBotao-1].style.display=`none`;
-    }
-
-    //function pra incrementaçao e decrementaçao
-    function selecionando(subSom){
-        
+        img[nmrBotao-1].style.border = `none`;
     }
 
 }
 
+function operacao(operador,nmrBotao){
+    let qtdItem = document.getElementsByClassName("number");
+    let atual = parseInt(qtdItem.innerText);
+    let total = parseInt(quantidade.innerText);
 
+}
