@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+/*configs gerais*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+/*variaveis*/
+:root{
+    --bkg: #F4EDEB;
+    --titulos: #260F08;
+    --subTitulos: #8f7674d5;
+    --valores: #CD6243;
+    --legendaCarrinho: #87635A;
+}
+
+body{
+    background-color: var(--bkg);
+
+    padding-bottom: 50px;
+}
+
+main{
+    padding: 60px 30px 0px 30px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/*area menu*/
+
+#menu{
+    display: flex;
+    flex-direction: column;
+}
+
+#h1Menu{
+    padding-bottom: 50px;
+
+    color: var(--titulos);
+}
+
+.itens{
+    align-self: center;
+
+    position: relative;
+
+    margin-bottom: 40px;
+}
+
+.imgItens{
+    width: 250px;
+
+    border-radius: 20px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.63);
+}
+
+button{
+    position: absolute;
+
+    padding: 15px;
+
+    width: 150px;
+
+    border-radius: 20px;
+    border: 1px solid var(--titulos);
+
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.2em;
+    font-weight: 100;
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+button:hover{
+    border-color: var(--valores);
+
+    color: var(--valores);
+
+    transition: .8s;
+}
+
+p{
+    padding-bottom: 5px;
+
+    color: var(--subTitulos);
+
+    font-size: 1.1em;
+}
+
+.valores{
+    color: var(--valores);
+}
+
+h2{
+    padding-bottom: 5px;
+
+    color: var(--titulos);
+}
+
+/* fim area do menu */
+
+/*area carrinho*/
+
+#carrinho{
+    background-color: white;
+
+    width: 313px;
+
+    border-radius: 20px;
+
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.63);
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#no-cart{
+    align-self: center;
+}
+
+#h1Carrinho{
+    color: var(--valores);
+}
+
+#legendaCarrinho{
+    color: var(--legendaCarrinho);
+    text-align: center;
+}   
