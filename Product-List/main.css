@@ -36,7 +36,7 @@ main{
 /*area menu*/
 
 #menu{
-    max-width: 600px;
+    max-width: 900px;
 }
 
 #h1Menu{
@@ -92,14 +92,14 @@ button{
     background-color: white;
 
     cursor: pointer;
+
+    transition: .5s;
 }
 
 button:hover{
     border-color: var(--valores);
 
     color: var(--valores);
-
-    transition: .8s;
 }
 
 p{
