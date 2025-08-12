@@ -25,19 +25,18 @@ body{
 }
 
 main{
-    padding: 60px 30px 0px 30px;
+    padding: 20px;
 
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 
 /*area menu*/
 
 #menu{
-    display: flex;
-    flex-direction: column;
+    max-width: 600px;
 }
 
 #h1Menu{
@@ -46,12 +45,17 @@ main{
     color: var(--titulos);
 }
 
-.itens{
-    align-self: center;
+#cntMenu{
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.itens{
     position: relative;
 
-    margin-bottom: 40px;
+    margin: 15px;
 }
 
 .imgItens{
