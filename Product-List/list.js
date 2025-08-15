@@ -1,3 +1,3 @@
-function adicionar(identificador,nome,valor){
+function adicionar(identificador,nome,valor,qtde){
     
 }
