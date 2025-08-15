@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <!--inicio main-->
     <main>
         <!--secao do menu de sobremesas-->
         <section id="menu">
@@ -18,58 +19,80 @@
             <!--titulo do menu-->
             <h1 id="h1Menu">Sobremesas</h1>
 
+            <!--cnt para as sobremesas-->
             <div id="cntMenu">
+
                 <!--wafle-->
                 <div class="itens">
                     <img class="imgItens" src="img/waffle.jpg" alt="waffle">
-                    <button class="btn" onclick="adicionar(0,'Waffle',20,0)" > <img src="img/cart.svg" alt="carrinhoAdd">Adicionar</button>
+                    <button class="btns" onclick="adicionar(0,'Waffle',20,0)" > 
+                        <span class="textBtns"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+                    </button>
                     <p>Waffle</p>
                     <h2>Waffle</h2>
                     <p class="valores">R$ 20</p>
                 </div>
+
                 <!--creme brule-->
                 <div class="itens">
                     <img class="imgItens" src="img/Creme Brule.jpg" alt="creme-brule">
-                    <button class="btn" onclick="adicionar(1,'Creme Brule',25,0)"> <img src="img/cart.svg" alt="carrinhoAdd">Adicionar</button>
+                    <button class="btns" onclick="adicionar(1,'Creme Brule',25,0)">
+                        <span class="textBtns"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+                    </button>
                     <p>Crème Brûlée</p>
                     <h2>Crème Brûlée</h2>
                     <p class="valores">R$ 25</p>
                 </div>
+
                 <!--macarons-->
                 <div class="itens">
                     <img class="imgItens" src="img/Macarons.jpg" alt="macarons">
-                    <button class="btn" onclick="adicionar(2,'Macarons',27,0)"> <img src="img/cart.svg" alt="carrinhoAdd">Adicionar</button>
+                    <button class="btns" onclick="adicionar(2,'Macarons',27,0)">
+                        <span class="textBtns"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+                    </button>
                     <p>Macaron</p>
                     <h2>Macaron Porção(5)</h2>
                     <p class="valores">R$ 27</p>
                 </div>
+
                 <!--tiramisu-->
                 <div class="itens">
                     <img class="imgItens" src="img/Tiramisu.jpg" alt="tiramisú">
-                    <button class="btn" onclick="adicionar(3,'Tiramisú',19,0)"> <img src="img/cart.svg" alt="carrinhoAdd">Adicionar</button>
+                    <button class="btns" onclick="adicionar(3,'Tiramisú',19,0)">
+                        <span class="textBtns"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+                    </button>
                     <p>Tiramisú</p>
                     <h2>Tiramisú</h2>
                     <p class="valores">R$ 19</p>
                 </div>
+
                 <!--brownie-->
                 <div class="itens">
                     <img class="imgItens" src="img/Brownie.jpg" alt="brownie">
-                    <button class="btn" onclick="adicionar(4,'Brownie',12,0)"> <img src="img/cart.svg" alt="carrinhoAdd">Adicionar</button>
+                    <button class="btns" onclick="adicionar(4,'Brownie',12,0)">
+                        <span class="textBtns"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+                    </button>
                     <p>Brownie</p>
                     <h2>Brownie de caramelo</h2>
                     <p class="valores">R$ 12</p>
                 </div>
+
                 <!--red velvet-->
                 <div class="itens">
                     <img class="imgItens" src="img/Red velvet.jpg" alt="bolo-red-velvet">
-                    <button class="btn" onclick="adicionar(5,'Bolo Red Velvet',20,0)"> <img src="img/cart.svg" alt="carrinhoAdd">Adicionar</button>
+                    <button class="btns" onclick="adicionar(5,'Bolo Red Velvet',20,0)">
+                        <span class="textBtns"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+                    </button>
                     <p>Bolo</p>
                     <h2>Bolo Red Velvet</h2>
                     <p class="valores">R$ 20</p>
                 </div>
+                
             </div>
+            <!--fim cnt para as sobremesas-->
 
         </section>
+        <!--fim seção menu sobremesas-->
 
         <div>
             <section id="carrinho">
