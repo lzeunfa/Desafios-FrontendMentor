@@ -60,13 +60,17 @@ main{
 }
 
 .imgItens{
-    width: 250px;
+    width: 200px;
 
     border-radius: 20px;
 
-    margin-bottom: 30px;
+    margin-bottom: 70px;
 
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.63);
+}
+
+.imgItens-ativo{
+    border:2px solid var(--ativo);
 }
 
 .btns{
@@ -79,7 +83,7 @@ main{
     border-radius: 20px;
     border: 1px solid var(--titulos);
 
-    top: 65%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%,-50%);
 
@@ -106,13 +110,13 @@ main{
 .btns-ativo{
     background-color: var(--ativo);
 
-    border: none;
+    border: 1px solid var(--ativo);
 
     color: white;
 }
 
 .btns-ativo:hover{
-    border:none;
+    border: 1px solid var(--ativo);
 
     color: white;
 }
