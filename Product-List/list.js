@@ -15,7 +15,9 @@ for(let i = 0; i<textBtnsClicado.length;i++){
 
 //função executada ao clicar o btn
 function selecionado(identificador,nome,valor,qtde){
-    textBtnsVazio[identificador].style.display = "none";   
+    textBtnsVazio[identificador].style.display = "none"; 
+    
+    btns[identificador].classList.toggle('btns-ativo');
 
     textBtnsClicado[identificador].style.display = "block";
 

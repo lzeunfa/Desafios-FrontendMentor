@@ -16,6 +16,7 @@
     --subTitulos: #8f7674d5;
     --valores: #CD6243;
     --legendaCarrinho: #87635A;
+    --ativo: #C73A0F;
 }
 
 body{
@@ -68,7 +69,7 @@ main{
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.63);
 }
 
-button{
+.btns{
     position: absolute;
 
     padding: 15px;
@@ -96,25 +97,39 @@ button{
     transition: .5s;
 }
 
-button:hover{
+.btns:hover{
     border-color: var(--valores);
 
     color: var(--valores);
 }
 
+.btns-ativo{
+    background-color: var(--ativo);
+
+    border: none;
+
+    color: white;
+}
+
+.btns-ativo:hover{
+    border:none;
+
+    color: white;
+}
+
 /*parte do segundo conteudo do btn*/
 .operacoesP{
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid white;
 
-    padding: 4px 6px 5px 6px;
+    padding: 3px 6px 4px 5px;
 }
 
 .operacoesN{
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid white;
 
-    padding: 3px 8px 5px 8px;
+    padding: 2px 7px 4px 7px;
 }
 /*fim parte do segundo conteudo do btn*/
 
