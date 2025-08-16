@@ -25,8 +25,20 @@
                 <!--wafle-->
                 <div class="itens">
                     <img class="imgItens" src="img/waffle.jpg" alt="waffle">
-                    <button class="btns" onclick="adicionar(0,'Waffle',20,0)" > 
-                        <span class="textBtns"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+                    <button class="btns" onclick="selecionado(0,'Waffle',20,0)" > 
+                        <!--conteudo do btn quando está sem ser clicado-->
+                        <span class="textBtnsVazio"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+
+                        <!--conteudo do btn após ser clicado-->
+                        <span class="textBtnsClicado">
+                            <!--subtração-->
+                            <span class="operacoesN" onclick="diminuirItem()">-</span> 
+                            <!--valor-->
+                            <span class="valorBtnsItem">valor</span> 
+                            <!--adição-->
+                            <span class="operacoesP" onclick="somarItem()">+</span>
+                        </span>
+
                     </button>
                     <p>Waffle</p>
                     <h2>Waffle</h2>
@@ -36,8 +48,9 @@
                 <!--creme brule-->
                 <div class="itens">
                     <img class="imgItens" src="img/Creme Brule.jpg" alt="creme-brule">
-                    <button class="btns" onclick="adicionar(1,'Creme Brule',25,0)">
-                        <span class="textBtns"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+                    <button class="btns" onclick="selecionado(1,'Creme Brule',25,0)">
+                        <span class="textBtnsVazio"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+                        <span class="textBtnsClicado">adadadada</span>
                     </button>
                     <p>Crème Brûlée</p>
                     <h2>Crème Brûlée</h2>
@@ -47,8 +60,8 @@
                 <!--macarons-->
                 <div class="itens">
                     <img class="imgItens" src="img/Macarons.jpg" alt="macarons">
-                    <button class="btns" onclick="adicionar(2,'Macarons',27,0)">
-                        <span class="textBtns"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+                    <button class="btns" onclick="selecionado(2,'Macarons',27,0)">
+                        <span class="textBtnsVazio"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
                     </button>
                     <p>Macaron</p>
                     <h2>Macaron Porção(5)</h2>
@@ -58,8 +71,8 @@
                 <!--tiramisu-->
                 <div class="itens">
                     <img class="imgItens" src="img/Tiramisu.jpg" alt="tiramisú">
-                    <button class="btns" onclick="adicionar(3,'Tiramisú',19,0)">
-                        <span class="textBtns"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+                    <button class="btns" onclick="selecionado(3,'Tiramisú',19,0)">
+                        <span class="textBtnsVazio"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
                     </button>
                     <p>Tiramisú</p>
                     <h2>Tiramisú</h2>
@@ -69,8 +82,8 @@
                 <!--brownie-->
                 <div class="itens">
                     <img class="imgItens" src="img/Brownie.jpg" alt="brownie">
-                    <button class="btns" onclick="adicionar(4,'Brownie',12,0)">
-                        <span class="textBtns"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+                    <button class="btns" onclick="selecionado(4,'Brownie',12,0)">
+                        <span class="textBtnsVazio"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
                     </button>
                     <p>Brownie</p>
                     <h2>Brownie de caramelo</h2>
@@ -80,8 +93,8 @@
                 <!--red velvet-->
                 <div class="itens">
                     <img class="imgItens" src="img/Red velvet.jpg" alt="bolo-red-velvet">
-                    <button class="btns" onclick="adicionar(5,'Bolo Red Velvet',20,0)">
-                        <span class="textBtns"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
+                    <button class="btns" onclick="selecionado(5,'Bolo Red Velvet',20,0)">
+                        <span class="textBtnsVazio"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
                     </button>
                     <p>Bolo</p>
                     <h2>Bolo Red Velvet</h2>
