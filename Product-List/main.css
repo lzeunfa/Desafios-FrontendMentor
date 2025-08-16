@@ -44,6 +44,10 @@ main{
     padding-bottom: 50px;
 
     color: var(--titulos);
+
+    padding-left: 50px;
+
+    font-weight: 900;
 }
 
 #cntMenu{
