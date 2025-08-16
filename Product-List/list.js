@@ -16,6 +16,11 @@ for(let i = 0; i<textBtnsClicado.length;i++){
     textBtnsClicado[i].style.display = "none";
 }
 
+//recebendo os valores para aprecer ao adicionar itens
+let valorBtnsItem = document.getElementsByClassName("valorBtnsItem");
+
+let valorAddItem = [0,0,0,0,0,0];
+
 //função executada ao clicar o btn
 function selecionado(identificador,nome,valor,qtde){
 
@@ -27,8 +32,21 @@ function selecionado(identificador,nome,valor,qtde){
 
     imgItens[identificador].classList.add('imgItens-ativo');
 
+    //alteração de valores nos btns ao clica-los
+    if(valorAddItem[identificador] == 0){
+        valorAddItem[identificador] ++;
+        valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
+    }else{
+        somarItem(identificador);
+    }
+    
     //adiciona o segundo conteúdo do btn
     textBtnsClicado[identificador].style.display = "block";
 
     return;
+}
+
+//funçaõ para as operações positivas
+function somarItem(identificador){
+    valorAddItem[identificador] ++;
 }

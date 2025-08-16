@@ -113,6 +113,8 @@ main{
     border: 1px solid var(--ativo);
 
     color: white;
+
+    z-index: 0;
 }
 
 .btns-ativo:hover{
@@ -127,6 +129,9 @@ main{
     border: 1px solid white;
 
     padding: 3px 6px 4px 5px;
+    margin-left: 5px;
+
+    z-index: 1;
 }
 
 .operacoesN{
@@ -134,6 +139,9 @@ main{
     border: 1px solid white;
 
     padding: 2px 7px 4px 7px;
+
+    margin-right: 5px;
+    z-index: 1;
 }
 /*fim parte do segundo conteudo do btn*/
 
