@@ -1,7 +1,6 @@
 //recebe todas as imagens dos itens
 let imgItens = document.getElementsByClassName("imgItens");
 
-
 //recebe todos os button
 let btns = document.getElementsByClassName('btns');
 
@@ -19,6 +18,7 @@ for(let i = 0; i<textBtnsClicado.length;i++){
 
 //função executada ao clicar o btn
 function selecionado(identificador,nome,valor,qtde){
+
     //remove o conteudo inicial do btn
     textBtnsVazio[identificador].style.display = "none"; 
 
