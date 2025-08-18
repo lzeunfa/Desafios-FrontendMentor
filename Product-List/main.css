@@ -77,7 +77,7 @@ main{
     border:2px solid var(--ativo);
 }
 
-.btns{
+.btns, .btns-ativado{
     position: absolute;
 
     padding: 15px;
@@ -105,18 +105,17 @@ main{
     transition: .5s;
 }
 
+.btns-ativado{
+    background-color: var(--ativo);
+    color: white;
+
+    border: 1px solid var(--ativo);
+}
+
 .btns:hover{
     border-color: var(--valores);
 
     color: var(--valores);
-}
-
-.btns-ativo{
-    background-color: var(--ativo);
-
-    border: 1px solid var(--ativo);
-
-    color: white;
 }
 
 .btns-ativo:hover{
@@ -138,7 +137,7 @@ main{
     border-radius: 50%;
     border: 1px solid white;
 
-    padding: 2px 7px 4px 7px;
+    padding: 2px 7px 5px 8px;
 
     margin-right: 5px;
 }
