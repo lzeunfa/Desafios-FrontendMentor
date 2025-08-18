@@ -1,19 +1,16 @@
 //recebe todas as imagens dos itens
 let imgItens = document.getElementsByClassName("imgItens");
 
-//recebe todos os button
+//recebe todos os button inativos
 let btns = document.getElementsByClassName('btns');
-
-//span do botão quando não está selecionado
-let textBtnsVazio = document.getElementsByClassName("textBtnsVazio");
-for(let i = 0; i<textBtnsVazio.length;i++){
-    textBtnsVazio[i].style.display = "block";
+for(let i = 0;i<btns.length;i++){
+    btns[i].style.display = "block";
 }
 
-//span do botão quando foi selecionado
-let textBtnsClicado = document.getElementsByClassName('textBtnsClicado');
-for(let i = 0; i<textBtnsClicado.length;i++){
-    textBtnsClicado[i].style.display = "none";
+//recebe todos os btns ativos
+let btns_ativos = document.getElementsByClassName('btns-ativado');
+for(let i = 0;i<btns_ativos.length;i++){
+    btns_ativos[i].style.display = "none";
 }
 
 //recebendo os valores para aprecer ao adicionar itens
@@ -24,11 +21,8 @@ let valorAddItem = [0,0,0,0,0,0];
 //função executada ao clicar o btn
 function selecionado(identificador,nome,valor,qtde){
 
-    //remove o conteudo inicial do btn
-    textBtnsVazio[identificador].style.display = "none"; 
-
-    //trocas de classes de estilo
-    btns[identificador].classList.add('btns-ativo');
+    btns[identificador].style.display = "none";
+    btns_ativos[identificador].style.display = "block";
 
     imgItens[identificador].classList.add('imgItens-ativo');
 
@@ -49,4 +43,10 @@ function selecionado(identificador,nome,valor,qtde){
 //funçaõ para as operações positivas
 function somarItem(identificador){
     valorAddItem[identificador] ++;
+    valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
+}
+
+function diminuirItem(identificador){
+    valorAddItem[identificador] --;
+    valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
 }
