@@ -18,6 +18,13 @@ let valorBtnsItem = document.getElementsByClassName("valorBtnsItem");
 
 let valorAddItem = [0,0,0,0,0,0];
 
+//var para receber a quantidade total de itens adicionados ao carrinho
+let qtdICSpan = document.getElementById("qtdCarrinho"); //ic= itens carrinho
+let qtdItensCarrinho = 0;
+
+//ICspan recebe o valor inicial 0 da atde de itens
+qtdICSpan.innerHTML= qtdItensCarrinho;
+
 //função executada ao clicar o btn
 function selecionado(identificador,nome,valor,qtde){
 
@@ -26,16 +33,16 @@ function selecionado(identificador,nome,valor,qtde){
 
     imgItens[identificador].classList.add('imgItens-ativo');
 
-    //alteração de valores nos btns ao clica-los
-    if(valorAddItem[identificador] == 0){
-        valorAddItem[identificador] ++;
-        valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
-    }else{
-        somarItem(identificador);
-    }
+    valorAddItem[identificador] ++;
+    valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
+
+    qtdItensCarrinho += valorAddItem[identificador];
+    console.log(`qtdItensCarrinho ${qtdItensCarrinho}`);
     
     //adiciona o segundo conteúdo do btn
     textBtnsClicado[identificador].style.display = "block";
+
+    qtdICSpan.innerHTML = qtdItensCarrinho;
 
     return;
 }
@@ -49,4 +56,12 @@ function somarItem(identificador){
 function diminuirItem(identificador){
     valorAddItem[identificador] --;
     valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
+
+    if(valorAddItem[identificador]===0){
+        btns[identificador].style.display = "block";
+        btns_ativos[identificador].style.display = "none";
+
+        imgItens[identificador].classList.remove('imgItens-ativo');
+
+    }
 }
