@@ -32,14 +32,19 @@
                         <!--conteudo do btn quando está sem ser clicado-->
                         <span class="textBtnsVazio"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
 
+                    </button>
+
+                    <!--button após ser ativado-->
+                    <button class="btns-ativado">
+
                         <!--conteudo do btn após ser clicado-->
                         <span class="textBtnsClicado">
                             <!--subtração-->
-                            <span class="operacoesN" onclick="diminuirItem()">-</span> 
+                            <span class="operacoesN" onclick="diminuirItem(0,'Waflle',20)">-</span> 
                             <!--valor-->
                             <span class="valorBtnsItem"></span> 
                             <!--adição-->
-                            <span class="operacoesP" onclick="somarItem(0)">+</span>
+                            <span class="operacoesP" onclick="somarItem(0,'Waffle',20)">+</span>
                         </span>
 
                     </button>
@@ -57,17 +62,23 @@
                         <!--conteudo do btn quando está sem ser clicado-->
                         <span class="textBtnsVazio"><img src="img/cart.svg" alt="carrinhoAdd">Adicionar</span>
 
+                    </button>
+
+                    <!--button após ser ativado-->
+                    <button class="btns-ativado">
+
                         <!--conteudo do btn após ser clicado-->
                         <span class="textBtnsClicado">
                             <!--subtração-->
-                            <span class="operacoesN" onclick="diminuirItem()">-</span> 
+                            <span class="operacoesN" onclick="diminuirItem(1,'Crem Brule',25)">-</span> 
                             <!--valor-->
                             <span class="valorBtnsItem"></span> 
                             <!--adição-->
-                            <span class="operacoesP" onclick="somarItem()">+</span>
+                            <span class="operacoesP" onclick="somarItem(1,'Crem Brule',25)">+</span>
                         </span>
 
                     </button>
+
                     <p>Crème Brûlée</p>
                     <h2>Crème Brûlée</h2>
                     <p class="valores">R$ 25</p>
