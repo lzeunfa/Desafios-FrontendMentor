@@ -23,7 +23,8 @@ let qtdICSpan = document.getElementById("qtdCarrinho"); //ic= itens carrinho
 let qtdItensCarrinho = 0;
 
 //ICspan recebe o valor inicial 0 da atde de itens
-qtdICSpan.innerHTML= qtdItensCarrinho;
+qtdICSpan.innerText= qtdItensCarrinho;
+
 
 //função executada ao clicar o btn
 function selecionado(identificador,nome,valor,qtde){
@@ -36,27 +37,35 @@ function selecionado(identificador,nome,valor,qtde){
     valorAddItem[identificador] ++;
     valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
 
-    qtdItensCarrinho += valorAddItem[identificador];
-    console.log(`qtdItensCarrinho ${qtdItensCarrinho}`);
-    
-    //adiciona o segundo conteúdo do btn
-    textBtnsClicado[identificador].style.display = "block";
+    qtdItensCarrinho ++;
 
-    qtdICSpan.innerHTML = qtdItensCarrinho;
+    qtdICSpan.innerText = qtdItensCarrinho;
 
     return;
 }
 
 //funçaõ para as operações positivas
 function somarItem(identificador){
+    //adição de itens
     valorAddItem[identificador] ++;
     valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
+
+    //alteração de valor na qtd de itens no carrinho
+    qtdItensCarrinho++;
+    qtdICSpan.innerText = qtdItensCarrinho;
 }
 
+//função para as operações negativas
 function diminuirItem(identificador){
+    //decremento de itens
     valorAddItem[identificador] --;
     valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
 
+    //alteração de valor na qtd de itens no carrinho
+    qtdItensCarrinho--;
+    qtdICSpan.innerText = qtdItensCarrinho;
+
+    //verificação para não ter qtd negativa
     if(valorAddItem[identificador]===0){
         btns[identificador].style.display = "block";
         btns_ativos[identificador].style.display = "none";
