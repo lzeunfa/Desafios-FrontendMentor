@@ -135,13 +135,28 @@
         <!--fim seção menu sobremesas-->
 
         <div>
-            <section id="carrinho">
-                <h1 id="h1Carrinho">Seu carrinho (<span id="qtdCarrinho"></span>)</h1>
+            <section id="seCarrinho">
 
-            <div id="carrinhoVazio">
-                <img id="no-cart" src="img/No cart.svg" alt="no-cart" width="128px">
-                <p id="legendaCarrinho">Seus itens adicionados surgirão aqui</p>
-            </div>
+                <div id="carrinho">
+                <h1 id="h1Carrinho">Seu carrinho (<span id="qtdCarrinho"></span>)</h1>
+                </div>
+
+                <div id="carrinhoVazio">
+                    <img id="no-cart" src="img/No cart.svg" alt="no-cart" width="128px">
+                    <p id="legendaCarrinho">Seus itens adicionados surgirão aqui</p>
+                </div>
+
+                <div id="carrinhoCheio">
+
+                    <div class="cntCarrinhoCheio">
+                        <p id="order">Total:</p>
+                        <p id="orderValue">R$<span id="somaValores"></span></p>
+                    </div>
+
+                    <div id="carbonNeutral">
+                        <p><img src="img/Carbon icon three.svg" alt=""> Entrega neutra em <span id="carbono">carbono</span></p>
+                    </div>
+                </div>
 
             </section>
         </div>

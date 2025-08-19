@@ -33,6 +33,11 @@ let carrinhoItemDiv = document.createElement("div");
 
 let item_carrinho = document.getElementsByClassName("item_carrinho");
 
+let carrinhoCheio = document.getElementById("carrinhoCheio");
+    carrinhoCheio.style.display = "none";
+
+let spanSomaValores = document.getElementById("somaValores");
+let somaValores = 0;
 
 //função executada ao clicar o btn
 function selecionado(identificador,nome,valor,qtde){
@@ -44,6 +49,12 @@ function selecionado(identificador,nome,valor,qtde){
     //alteração de valor de qtd de itens no carrinho
     qtdItensCarrinho ++;
     qtdICSpan.innerText = qtdItensCarrinho;
+
+    somaValores += valor;
+    spanSomaValores.innerText = somaValores;
+
+    carrinhoCheio.style.display = "flex";
+
 
     //retira a div de carrinho vazio
     carrinhoVazio.style.display = "none";
@@ -102,5 +113,11 @@ function diminuirItem(identificador){
     //faz a div carrinhoVazio reaparecer aos itens serem zero
     if(qtdItensCarrinho===0){
         carrinhoVazio.style.display="flex";
+
+        carrinhoCheio.style.display = "none";
     }
+}
+
+function excluirItem(){
+    
 }

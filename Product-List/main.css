@@ -18,6 +18,8 @@
     --legendaCarrinho: #87635A;
     --ativo: #C73A0F;
     --exclusao: #bdb6b4;
+    --bkgCarbono: #F4EDEB;
+    --textCarbono: #79554A;
 }
 
 body{
@@ -176,7 +178,7 @@ h2{
 
 /*area carrinho*/
 
-#carrinho{
+#seCarrinho{
     background-color: white;
 
     width: 313px;
@@ -217,6 +219,18 @@ h2{
     font-size: 0.9em;
 }
 
+#carrinhoCheio{
+    flex-direction: column;
+
+    padding: 10px;
+}
+
+.cntCarrinhoCheio{
+    display: flex;
+
+    justify-content: space-between;
+}
+
 .nomeItem{
     color: var(--titulos);
 }
@@ -243,4 +257,29 @@ h2{
     padding: 3px 4px 2px 4px;
 
     cursor: pointer;
+}
+
+#order{
+    font-weight: 100;
+
+    color: var(--titulos);
+}
+
+#orderValue{
+    color: var(--titulos);
+}
+
+#carbonNeutral{
+    background-color: var(--bkgCarbono);
+
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#carbonNeutral > p{
+    color: var(--textCarbono);
+}
+
+#carbono{
+    color: var(--titulos);
 }
