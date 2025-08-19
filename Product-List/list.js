@@ -25,7 +25,13 @@ let qtdItensCarrinho = 0;
 //ICspan recebe o valor inicial 0 da atde de itens
 qtdICSpan.innerText= qtdItensCarrinho;
 
+//area para alterações no carrinho
+let carrinho = document.getElementById("carrinho");
 let carrinhoVazio = document.getElementById("carrinhoVazio");
+
+let carrinhoItemDiv = document.createElement("div");
+
+let item_carrinho = document.getElementsByClassName("item_carrinho");
 
 
 //função executada ao clicar o btn
@@ -41,6 +47,18 @@ function selecionado(identificador,nome,valor,qtde){
 
     //retira a div de carrinho vazio
     carrinhoVazio.style.display = "none";
+
+    carrinhoItemDiv.classList.add("item_carrinho");
+
+    carrinhoItemDiv.innerHTML += `
+        <p class="nomeItem">${nome}</p>
+        <div class="descricaoItem">
+            <p class="qtdEvalor"><span class="qtdItem">${valorAddItem[identificador]}x</span> R$ ${valor}</p>
+            <span class="excluirItem" onclick="excluirItem()">X</span>
+        </div>
+    `;
+
+    carrinho.appendChild(carrinhoItemDiv);
 
     //faz a troca de botões
     btns[identificador].style.display = "none";
@@ -79,6 +97,10 @@ function diminuirItem(identificador){
         btns_ativos[identificador].style.display = "none";
 
         imgItens[identificador].classList.remove('imgItens-ativo');
+    }
 
+    //faz a div carrinhoVazio reaparecer aos itens serem zero
+    if(qtdItensCarrinho===0){
+        carrinhoVazio.style.display="flex";
     }
 }

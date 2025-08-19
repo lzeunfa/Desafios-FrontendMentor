@@ -17,6 +17,7 @@
     --valores: #CD6243;
     --legendaCarrinho: #87635A;
     --ativo: #C73A0F;
+    --exclusao: #bdb6b4;
 }
 
 body{
@@ -201,9 +202,45 @@ h2{
 
 #h1Carrinho{
     color: var(--valores);
+
+    padding-bottom: 20px;
 }
 
 #legendaCarrinho{
     color: var(--legendaCarrinho);
     text-align: center;
 }   
+
+.item_carrinho{
+    margin: 0px 10px;
+
+    font-size: 0.9em;
+}
+
+.nomeItem{
+    color: var(--titulos);
+}
+
+.descricaoItem{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 5px;
+    margin-bottom: 10px;
+
+    border-bottom: 2px solid var(--exclusao);
+}
+
+.qtdItem{
+    color: var(--ativo);
+}
+
+.excluirItem{
+    color: var(--exclusao);
+
+    border: 1px solid var(--exclusao);
+    border-radius: 50%;
+    padding: 3px 4px 2px 4px;
+
+    cursor: pointer;
+}
