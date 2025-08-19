@@ -25,21 +25,29 @@ let qtdItensCarrinho = 0;
 //ICspan recebe o valor inicial 0 da atde de itens
 qtdICSpan.innerText= qtdItensCarrinho;
 
+let carrinhoVazio = document.getElementById("carrinhoVazio");
+
 
 //função executada ao clicar o btn
 function selecionado(identificador,nome,valor,qtde){
 
-    btns[identificador].style.display = "none";
-    btns_ativos[identificador].style.display = "block";
-
-    imgItens[identificador].classList.add('imgItens-ativo');
-
+    //alteração de valor no btn clicado
     valorAddItem[identificador] ++;
     valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
 
+    //alteração de valor de qtd de itens no carrinho
     qtdItensCarrinho ++;
-
     qtdICSpan.innerText = qtdItensCarrinho;
+
+    //retira a div de carrinho vazio
+    carrinhoVazio.style.display = "none";
+
+    //faz a troca de botões
+    btns[identificador].style.display = "none";
+    btns_ativos[identificador].style.display = "block";
+
+    //troca de estilo das imagens dos itens
+    imgItens[identificador].classList.add('imgItens-ativo');
 
     return;
 }

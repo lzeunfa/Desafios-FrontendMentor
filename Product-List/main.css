@@ -80,9 +80,9 @@ main{
 .btns, .btns-ativado{
     position: absolute;
 
-    padding: 15px;
+    padding: 12px;
 
-    width: 150px;
+    width: 170px;
 
     border-radius: 20px;
     border: 1px solid var(--titulos);
@@ -133,6 +133,11 @@ main{
     margin-left: 5px;
 }
 
+.operacoesP:hover{
+    color: green;
+    border-color: green;
+}
+
 .operacoesN{
     border-radius: 50%;
     border: 1px solid white;
@@ -140,6 +145,11 @@ main{
     padding: 2px 7px 5px 8px;
 
     margin-right: 5px;
+}
+
+.operacoesN:hover{
+    color: red;
+    border-color: red;
 }
 /*fim parte do segundo conteudo do btn*/
 
@@ -176,6 +186,11 @@ h2{
 
     padding: 10px;
 
+    display: flex;
+    flex-direction: column;
+}
+
+#carrinhoVazio{
     display: flex;
     flex-direction: column;
 }
