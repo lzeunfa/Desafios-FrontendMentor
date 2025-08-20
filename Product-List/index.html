@@ -134,34 +134,46 @@
         </section>
         <!--fim seção menu sobremesas-->
 
-        <div>
+        <!--div para ser container da section do carrinho-->
+        <div id="containerSecCarrinho">
+            <!--section para o carrinho-->
             <section id="seCarrinho">
 
+                <!--area visual da qtd de itens no carrinho-->
                 <div id="carrinho">
                 <h1 id="h1Carrinho">Seu carrinho (<span id="qtdCarrinho"></span>)</h1>
                 </div>
 
+                <!--area visual quando não há itens selecionados-->
                 <div id="carrinhoVazio">
                     <img id="no-cart" src="img/No cart.svg" alt="no-cart" width="128px">
                     <p id="legendaCarrinho">Seus itens adicionados surgirão aqui</p>
                 </div>
 
+                <!--area visual ao adicionar item ao carrinho-->
                 <div id="carrinhoCheio">
 
+                    <!--area do total do pedido-->
                     <div class="cntCarrinhoCheio">
                         <p id="order">Total:</p>
                         <p id="orderValue">R$<span id="somaValores"></span></p>
                     </div>
 
+                    <!--area visual sobre entrega neutra em carbono-->
                     <div id="carbonNeutral">
                         <p><img src="img/Carbon icon three.svg" alt=""> Entrega neutra em <span id="carbono">carbono</span></p>
                     </div>
 
+                    <!--botão para confirmação de pedido-->
                     <button id="confirmarPedido" onclick="confirmarPedido()">Confirmar pedido</button>
                 </div>
 
             </section>
+            <!--fim da section da area do carrinho-->
+
         </div>
+        <!--fim do container para a section do carrinho-->
+        
     </main>
     <!--fim da main-->
 
