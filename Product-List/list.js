@@ -59,8 +59,10 @@ function selecionado(identificador,nome,valor,qtde){
     //retira a div de carrinho vazio
     carrinhoVazio.style.display = "none";
 
+    //passsa uma classe para o item criado
     carrinhoItemDiv.classList.add("item_carrinho");
 
+    //conteudo do item criado
     carrinhoItemDiv.innerHTML += `
         <p class="nomeItem">${nome}</p>
         <div class="descricaoItem">
@@ -69,6 +71,7 @@ function selecionado(identificador,nome,valor,qtde){
         </div>
     `;
 
+    //joga o item criado para o último lugar da div carrinho
     carrinho.appendChild(carrinhoItemDiv);
 
     //faz a troca de botões
