@@ -1,5 +1,0 @@
--Preciso criar divs que apareçam com o nome do item e apenas ir alterando a quantidade dentro da div e o valor
--Quando apertar no x da div ele exclui os dados e o botao volta ao normal tambem
-
--ao clicar no adicionar o quantidade deve receber 1 que esta imposto no number do [nmrBotao-1]
-nisso, esse 1 é uma string, preciso torna-la valor para fazer alterações de soma e subtração sob ela e assim ela receber o valor e se alterando tanto no carrinho tanto no botao e quando for =0 o botao de adicionar volta a aparecer

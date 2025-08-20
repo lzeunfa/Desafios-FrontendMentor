@@ -13,10 +13,11 @@ for(let i = 0;i<btns_ativos.length;i++){
     btns_ativos[i].style.display = "none";
 }
 
-//recebendo os valores para aprecer ao adicionar itens
+//recebendo os valores para aparecer ao adicionar itens
 let valorBtnsItem = document.getElementsByClassName("valorBtnsItem");
 
 let valorAddItem = [0,0,0,0,0,0];
+let valorFixAddItem = [0,0,0,0,0,0];
 
 //var para receber a quantidade total de itens adicionados ao carrinho
 let qtdICSpan = document.getElementById("qtdCarrinho"); //ic= itens carrinho
@@ -29,8 +30,6 @@ qtdICSpan.innerText= qtdItensCarrinho;
 let carrinho = document.getElementById("carrinho");
 let carrinhoVazio = document.getElementById("carrinhoVazio");
 
-let carrinhoItemDiv = document.createElement("div");
-
 let item_carrinho = document.getElementsByClassName("item_carrinho");
 
 let carrinhoCheio = document.getElementById("carrinhoCheio");
@@ -41,6 +40,11 @@ let somaValores = 0;
 
 //função executada ao clicar o btn
 function selecionado(identificador,nome,valor,qtde){
+
+    //criação de uma div para os itens adicionados ao carrinho
+    let carrinhoItemDiv = document.createElement("div");
+
+    carrinhoItemDiv.setAttribute("data-id", identificador)
 
     //alteração de valor no btn clicado
     valorAddItem[identificador] ++;
@@ -69,12 +73,14 @@ function selecionado(identificador,nome,valor,qtde){
         <p class="nomeItem">${nome}</p>
         <div class="descricaoItem">
             <p class="qtdEvalor"><span class="qtdItem">${valorAddItem[identificador]}x</span> R$ ${valor}</p>
-            <span class="excluirItem" onclick="excluirItem()">X</span>
+            <span class="excluirItem" onclick="excluirItem(${identificador}, this,${valor})">X</span>
         </div>
     `;
 
+    //^^^^^^^^ this é a referênciado elemento clicado, para acessar o pai que é o .item_carrinho
+
     //conteudo do item criado
-    carrinhoItemDiv.innerHTML += conteudoHTMLItemDiv;
+    carrinhoItemDiv.innerHTML = conteudoHTMLItemDiv;
 
     //joga o item criado para o último lugar da div carrinho
     carrinho.appendChild(carrinhoItemDiv);
@@ -105,7 +111,7 @@ function somarItem(identificador,nome,valor){
 }
 
 //função para as operações negativas
-function diminuirItem(identificador,nome,valor){
+function diminuirItem(identificador,nome,valor,elementoX){
     //decremento de itens
     valorAddItem[identificador] --;
     valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
@@ -113,6 +119,10 @@ function diminuirItem(identificador,nome,valor){
     //decremento do valor de itens ao total do pedido
     somaValores -= valor;
     spanSomaValores.innerText = somaValores;
+
+    if(valorFixAddItem[identificador]>1){
+        valorFixAddItem[identificador]--;
+    }
 
     //alteração de valor na qtd de itens no carrinho
     qtdItensCarrinho--;
@@ -124,6 +134,9 @@ function diminuirItem(identificador,nome,valor){
         btns_ativos[identificador].style.display = "none";
 
         imgItens[identificador].classList.remove('imgItens-ativo');
+
+        //elimina  do carrinho o item
+        excluirItem(identificador,null,valor);
     }
 
     //faz a div carrinhoVazio reaparecer aos itens serem zero
@@ -134,6 +147,55 @@ function diminuirItem(identificador,nome,valor){
     }
 }
 
-function excluirItem(identificador){
+//função para exclusão dos itens com o X no carrinho
+function excluirItem(identificador, elementoX,valor){
     
+    //criacao de var para receber a div a ser eliminada
+    let itemDiv;
+
+    if(elementoX){
+        //itemDiv a ser eliminado dependendo do elementoX
+        itemDiv = elementoX.closest(".item_carrinho");
+    }else{
+        //itemDiv a ser eliminado sem depender do elementoX
+        itemDiv = document.querySelector(`.item_carrinho[data-id = "${identificador}"]`);
+    }
+
+    //remove o itemDiv clicado
+    if(itemDiv){
+        itemDiv.remove();
+    }
+
+    //guardando quantidade antes de zerar
+    let qtdRemovida = valorAddItem[identificador];
+
+    //altera valor mostrado da quantidade de itens no carrinho
+    qtdItensCarrinho -= qtdRemovida;
+    qtdICSpan.innerText = qtdItensCarrinho;    
+
+    //zera valores dos btns do item
+    valorAddItem[identificador] = 0;
+    valorBtnsItem[identificador].innerHTML = 0;
+
+    //realiza as trocas de visuais dos btns respectivos dos itens eliminados
+    if(valorAddItem[identificador]===0){
+        btns[identificador].style.display = "block";
+        btns_ativos[identificador].style.display = "none";
+
+        imgItens[identificador].classList.remove('imgItens-ativo');
+    }
+
+    //calculo para ajustar o valor total do pedido
+    //baseado na quantidade e valor do item removido
+    somaValores -= valor * qtdRemovida;
+    spanSomaValores.innerText = somaValores;
+    valorAddItem[identificador] = 0;
+
+    //realiza a troca de visuais do carrinho caso não existam mais itens
+    if(qtdItensCarrinho ===0){
+        carrinhoVazio.style.display="flex";
+
+        carrinhoCheio.style.display = "none";
+    }
+
 }
