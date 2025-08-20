@@ -64,14 +64,17 @@ function selecionado(identificador,nome,valor,qtde){
     //passsa uma classe para o item criado
     carrinhoItemDiv.classList.add("item_carrinho");
 
-    //conteudo do item criado
-    carrinhoItemDiv.innerHTML += `
+    //criacao da variavel para receber o html de criacao de conteudo
+    let conteudoHTMLItemDiv =  `
         <p class="nomeItem">${nome}</p>
         <div class="descricaoItem">
             <p class="qtdEvalor"><span class="qtdItem">${valorAddItem[identificador]}x</span> R$ ${valor}</p>
             <span class="excluirItem" onclick="excluirItem()">X</span>
         </div>
     `;
+
+    //conteudo do item criado
+    carrinhoItemDiv.innerHTML += conteudoHTMLItemDiv;
 
     //joga o item criado para o último lugar da div carrinho
     carrinho.appendChild(carrinhoItemDiv);
