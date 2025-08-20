@@ -17,6 +17,7 @@
     --valores: #CD6243;
     --legendaCarrinho: #87635A;
     --ativo: #C73A0F;
+    --ativoHover: #c73a0fb1;
     --exclusao: #bdb6b4;
     --bkgCarbono: #F4EDEB;
     --textCarbono: #79554A;
@@ -282,4 +283,25 @@ h2{
 
 #carbono{
     color: var(--titulos);
+}
+
+#confirmarPedido{
+    background-color: var(--ativo);
+
+    border: none;
+    border-radius: 20px;
+
+    height: 50px;
+    
+    margin-top: 20px;
+
+    color: white;
+
+    font-size: 1.2em;
+
+    cursor: pointer;
+}
+
+#confirmarPedido:hover{
+    background-color: var(--ativoHover);
 }
