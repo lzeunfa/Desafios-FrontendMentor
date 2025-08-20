@@ -50,9 +50,11 @@ function selecionado(identificador,nome,valor,qtde){
     qtdItensCarrinho ++;
     qtdICSpan.innerText = qtdItensCarrinho;
 
+    //adiciona o valor do item ao total do pedido
     somaValores += valor;
     spanSomaValores.innerText = somaValores;
 
+    //mostra a area visual do carrinho cheio(com item adicionado)
     carrinhoCheio.style.display = "flex";
 
 
