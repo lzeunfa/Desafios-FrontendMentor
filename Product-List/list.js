@@ -82,10 +82,14 @@ function selecionado(identificador,nome,valor,qtde){
 }
 
 //funçaõ para as operações positivas
-function somarItem(identificador){
+function somarItem(identificador,nome,valor){
     //adição de itens
     valorAddItem[identificador] ++;
     valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
+
+    //adição do valor de itens ao total do pedido
+    somaValores += valor;
+    spanSomaValores.innerText = somaValores;
 
     //alteração de valor na qtd de itens no carrinho
     qtdItensCarrinho++;
@@ -93,10 +97,14 @@ function somarItem(identificador){
 }
 
 //função para as operações negativas
-function diminuirItem(identificador){
+function diminuirItem(identificador,nome,valor){
     //decremento de itens
     valorAddItem[identificador] --;
     valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
+
+    //decremento do valor de itens ao total do pedido
+    somaValores -= valor;
+    spanSomaValores.innerText = somaValores;
 
     //alteração de valor na qtd de itens no carrinho
     qtdItensCarrinho--;
@@ -118,6 +126,6 @@ function diminuirItem(identificador){
     }
 }
 
-function excluirItem(){
+function excluirItem(identificador){
     
 }
