@@ -137,11 +137,6 @@ main{
     margin-left: 5px;
 }
 
-.operacoesP:hover{
-    color: green;
-    border-color: green;
-}
-
 .operacoesN{
     border-radius: 50%;
     border: 1px solid white;
@@ -149,11 +144,6 @@ main{
     padding: 2px 7px 5px 8px;
 
     margin-right: 5px;
-}
-
-.operacoesN:hover{
-    color: red;
-    border-color: red;
 }
 /*fim parte do segundo conteudo do btn*/
 

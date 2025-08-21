@@ -71,9 +71,11 @@ function selecionado(identificador,nome,valor,qtde){
     //criacao da variavel para receber o html de criacao de conteudo
     let conteudoHTMLItemDiv =  `
         <p class="nomeItem">${nome}</p>
+        <div class="itemCarrinhoHTML" data-id = "${identificador}">
         <div class="descricaoItem">
             <p class="qtdEvalor"><span class="qtdItem">${valorAddItem[identificador]}x</span> R$ ${valor}</p>
             <span class="excluirItem" onclick="excluirItem(${identificador}, this,${valor})">X</span>
+        </div>
         </div>
     `;
 
@@ -97,6 +99,15 @@ function selecionado(identificador,nome,valor,qtde){
 
 //funçaõ para as operações positivas
 function somarItem(identificador,nome,valor){
+    let itemDiv = document.querySelector(`.itemCarrinhoHTML[data-id="${identificador}"]`);
+
+    if (itemDiv) {
+    let qtdSpan = itemDiv.querySelector(".qtdItem");
+    if (qtdSpan) {
+        qtdSpan.textContent = `${valorAddItem[identificador]+1}x`;
+    }
+    }
+
     //adição de itens
     valorAddItem[identificador] ++;
     valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
@@ -112,6 +123,15 @@ function somarItem(identificador,nome,valor){
 
 //função para as operações negativas
 function diminuirItem(identificador,nome,valor,elementoX){
+    let itemDiv = document.querySelector(`.itemCarrinhoHTML[data-id="${identificador}"]`);
+
+    if (itemDiv) {
+    let qtdSpan = itemDiv.querySelector(".qtdItem");
+    if (qtdSpan) {
+        qtdSpan.textContent = `${valorAddItem[identificador]-1}x`;
+    }
+    }
+
     //decremento de itens
     valorAddItem[identificador] --;
     valorBtnsItem[identificador].innerHTML = valorAddItem[identificador];
