@@ -38,6 +38,10 @@ let carrinhoCheio = document.getElementById("carrinhoCheio");
 let spanSomaValores = document.getElementById("somaValores");
 let somaValores = 0;
 
+//var para receber o cnt do pedido confirmado
+let cntPedidoConfirm = document.getElementById("cntPedidoConfirm");
+cntPedidoConfirm.style.display = "none";
+
 //função executada ao clicar o btn
 function selecionado(identificador,nome,valor,qtde){
 
@@ -97,15 +101,22 @@ function selecionado(identificador,nome,valor,qtde){
     return;
 }
 
+
 //funçaõ para as operações positivas
 function somarItem(identificador,nome,valor){
+    //var para receber o primeiro elemento que encontrar e corresponder ao seletor css
     let itemDiv = document.querySelector(`.itemCarrinhoHTML[data-id="${identificador}"]`);
 
+    //verifica se o itemDiv existe
     if (itemDiv) {
-    let qtdSpan = itemDiv.querySelector(".qtdItem");
-    if (qtdSpan) {
-        qtdSpan.textContent = `${valorAddItem[identificador]+1}x`;
-    }
+        //var que recebe um elemento com a classe qtdItem dentro de itemDiv
+        let qtdSpan = itemDiv.querySelector(".qtdItem");
+
+        //verifica se o qtdSpan existe para fazer alteração de valor mostrado
+        //na quantidade mostrada +1
+        if (qtdSpan) {
+            qtdSpan.textContent = `${valorAddItem[identificador]+1}x`;
+        }
     }
 
     //adição de itens
@@ -121,15 +132,22 @@ function somarItem(identificador,nome,valor){
     qtdICSpan.innerText = qtdItensCarrinho;
 }
 
+
 //função para as operações negativas
 function diminuirItem(identificador,nome,valor,elementoX){
+    //var para receber o primeiro elemento que encontrar e corresponder ao seletor css
     let itemDiv = document.querySelector(`.itemCarrinhoHTML[data-id="${identificador}"]`);
 
+    //verifica se o itemDiv existe
     if (itemDiv) {
-    let qtdSpan = itemDiv.querySelector(".qtdItem");
-    if (qtdSpan) {
-        qtdSpan.textContent = `${valorAddItem[identificador]-1}x`;
-    }
+        //var que recebe um elemento com a classe qtdItem dentro de itemDiv
+        let qtdSpan = itemDiv.querySelector(".qtdItem");
+
+        //verifica se o qtdSpan existe para fazer alteração de valor mostrado
+        //na quantidade mostrada -1
+        if (qtdSpan) {
+            qtdSpan.textContent = `${valorAddItem[identificador]-1}x`;
+        }
     }
 
     //decremento de itens
@@ -150,6 +168,7 @@ function diminuirItem(identificador,nome,valor,elementoX){
 
     //verificação para não ter qtd negativa
     if(valorAddItem[identificador]===0){
+        //alterações visuais
         btns[identificador].style.display = "block";
         btns_ativos[identificador].style.display = "none";
 
@@ -161,11 +180,13 @@ function diminuirItem(identificador,nome,valor,elementoX){
 
     //faz a div carrinhoVazio reaparecer aos itens serem zero
     if(qtdItensCarrinho===0){
+        //alterações visuais
         carrinhoVazio.style.display="flex";
 
         carrinhoCheio.style.display = "none";
     }
 }
+
 
 //função para exclusão dos itens com o X no carrinho
 function excluirItem(identificador, elementoX,valor){
@@ -199,6 +220,7 @@ function excluirItem(identificador, elementoX,valor){
 
     //realiza as trocas de visuais dos btns respectivos dos itens eliminados
     if(valorAddItem[identificador]===0){
+        //alterações visuais
         btns[identificador].style.display = "block";
         btns_ativos[identificador].style.display = "none";
 
@@ -213,9 +235,20 @@ function excluirItem(identificador, elementoX,valor){
 
     //realiza a troca de visuais do carrinho caso não existam mais itens
     if(qtdItensCarrinho ===0){
+        //alterações visuais
         carrinhoVazio.style.display="flex";
 
         carrinhoCheio.style.display = "none";
     }
 
+}
+
+//função para confirmação de pedido
+function confirmarPedido(){
+    cntPedidoConfirm.style.display = "flex";
+}
+
+//função para novo pedido
+function novoPedido(){
+    window.location.href = 'index.html';
 }

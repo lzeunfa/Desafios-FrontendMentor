@@ -35,6 +35,8 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
+    z-index: 0;
 }
 
 
@@ -275,7 +277,7 @@ h2{
     color: var(--titulos);
 }
 
-#confirmarPedido{
+#confirmarPedido, #novoPedido{
     background-color: var(--ativo);
 
     border: none;
@@ -292,6 +294,49 @@ h2{
     cursor: pointer;
 }
 
-#confirmarPedido:hover{
+#confirmarPedido:hover, #novoPedido:hover{
     background-color: var(--ativoHover);
+}
+
+/*fim da area do carrinho*/
+
+/*inicio area ded confirmação de pedido*/
+#cntPedidoConfirm{
+    align-items: center;
+    justify-content: center;
+
+
+    position: absolute;
+    top: 0%;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.132);
+}
+
+#itensConfirmados{
+    min-width: 350px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    padding: 10px;
+}
+
+#topoConfirmado{
+    display: flex;
+    flex-direction: column;
+}
+
+#topoConfirmado > h1{
+    color: var(--titulos);
+
+    font-weight: bolder;
+    font-size: 1.8em;
+}
+
+#topoConfirmado > p{
+    color: var(--titulos);
 }
